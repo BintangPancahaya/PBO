@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_3;
+package Pertemuan_3;
 
 public class Employee {
     int id;

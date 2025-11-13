@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_1.TugasDemo;
+package Pertemuan_1.TugasDemo;
 
 public class KipasAngin {
     private String merk;

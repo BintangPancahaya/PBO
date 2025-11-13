@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_1.SepedaDemo;
+package Pertemuan_1.SepedaDemo;
 
 public class SepedaGunung extends Sepeda {
     private String tipeSuspensi;

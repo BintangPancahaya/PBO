@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_2;
+package Pertemuan_2;
 
 public class Main {
     public static void main(String[] args) {

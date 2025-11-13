@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_4.Percobaan_1;
+package Pertemuan_4.Percobaan_1;
 
 public class Laptop {
     private String merk;

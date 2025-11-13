@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_8.GameZombie;
+package Pertemuan_8.GameZombie;
 
 public abstract class Zombie extends Destroyable {
     protected int health;

@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_2;
+package Pertemuan_2;
 
 public class Barang {
     String kode, namaBarang;

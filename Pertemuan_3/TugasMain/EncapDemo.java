@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_3.TugasMain;
+package Pertemuan_3.TugasMain;
 
 public class EncapDemo {
     private String name;

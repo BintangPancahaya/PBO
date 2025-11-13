@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_7;
+package Pertemuan_7;
 
 public class Karyawan {
     private String nama;

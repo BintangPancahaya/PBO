@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_4.Percobaan_3;
+package Pertemuan_4.Percobaan_3;
 
 public class KeretaApi {
     private String nama, kelas;

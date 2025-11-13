@@ -1,4 +1,4 @@
-package Tugas.Pertemuan_4.Percobaan_2;
+package Pertemuan_4.Percobaan_2;
 
 public class Pelanggan {
     private String nama;
