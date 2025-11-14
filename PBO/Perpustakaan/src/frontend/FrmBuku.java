@@ -84,14 +84,14 @@ public class FrmBuku extends javax.swing.JFrame {
         labelPenulis.setBounds(15, 115, labelWidth, 20);
         txtPenulis.setBounds(120, 115, fieldWidth, 20);
         
-        btnSimpan.setBounds(15, 150, 80, 25);
-        btnTambahBaru.setBounds(100, 150, 110, 25);
-        btnHapus.setBounds(215, 150, 80, 25);
+        btnSimpan.setBounds(15, 150, 85, 25);
+        btnTambahBaru.setBounds(105, 150, 115, 25);
+        btnHapus.setBounds(225, 150, 75, 25);
         
-        txtCari.setBounds(350, 150, 150, 25);
-        btnCari.setBounds(505, 150, 60, 25);
+        txtCari.setBounds(320, 150, 150, 25);
+        btnCari.setBounds(475, 150, 75, 25);
         
-        jScrollPane1.setBounds(15, 185, 550, 200); // ScrollPane berisi tabel
+        jScrollPane1.setBounds(15, 185, 535, 200); // ScrollPane berisi tabel
 
         // --- Tambahkan Komponen ke Frame ---
         getContentPane().add(labelIdBuku);
@@ -144,7 +144,7 @@ public class FrmBuku extends javax.swing.JFrame {
         
         // --- Atur properti JFrame ---
         setTitle("Form Data Buku");
-        setSize(600, 450); // Sesuaikan ukuran window
+        setSize(570, 430); // Sesuaikan ukuran window
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         // 3. Panggil method dari tutorial di akhir konstruktor

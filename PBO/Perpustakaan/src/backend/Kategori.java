@@ -123,4 +123,10 @@ public class Kategori {
         String SQL = "DELETE FROM kategori WHERE idkategori = '" + this.idkategori + "'";
         DBHelper.executeQuery(SQL);
     }
+
+    // 11. Override toString() untuk menampilkan nama di ComboBox
+    @Override
+    public String toString() {
+        return this.nama;
+    }
 }

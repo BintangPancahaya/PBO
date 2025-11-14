@@ -10,6 +10,7 @@ public class FrmKategori extends javax.swing.JFrame {
 
     private JTextField txtIdKategori;
     private JTextField txtNama;
+    private JTextField txtKeterangan;
     private JButton btnSimpan;
     private JButton btnHapus;
     private JButton btnTambahBaru;
@@ -20,10 +21,12 @@ public class FrmKategori extends javax.swing.JFrame {
 
     private JLabel labelId;
     private JLabel labelNama;
+    private JLabel labelKeterangan;
 
     public FrmKategori() {
         txtIdKategori = new JTextField();
         txtNama = new JTextField();
+        txtKeterangan = new JTextField();
         btnSimpan = new JButton("Simpan");
         btnHapus = new JButton("Hapus");
         btnTambahBaru = new JButton("Tambah Baru");
@@ -32,39 +35,45 @@ public class FrmKategori extends javax.swing.JFrame {
         tblKategori = new JTable();
         jScrollPane1 = new JScrollPane();
 
-        labelId = new JLabel("ID");
-        labelNama = new JLabel("Kategori");
+        labelId = new JLabel("ID Kategori");
+        labelNama = new JLabel("Nama Kategori");
+        labelKeterangan = new JLabel("Keterangan");
 
         txtIdKategori.setText("0");
         txtIdKategori.setEnabled(false);
 
         tblKategori.setModel(new DefaultTableModel(
             new Object [][] {},
-            new String [] {"ID", "Kategori"}
+            new String [] {"ID", "Nama", "Keterangan"}
         ));
         jScrollPane1.setViewportView(tblKategori);
 
         getContentPane().setLayout(null);
 
         labelId.setBounds(15, 15, 100, 20);
-        txtIdKategori.setBounds(120, 15, 100, 20);
+        txtIdKategori.setBounds(120, 15, 150, 20);
 
-        labelNama.setBounds(15, 40, 100, 20);
-        txtNama.setBounds(120, 40, 300, 20);
+        labelNama.setBounds(15, 45, 100, 20);
+        txtNama.setBounds(120, 45, 200, 20);
 
-        btnSimpan.setBounds(15, 80, 100, 30);
-        btnTambahBaru.setBounds(125, 80, 110, 30);
-        btnHapus.setBounds(245, 80, 100, 30);
+        labelKeterangan.setBounds(15, 75, 100, 20);
+        txtKeterangan.setBounds(120, 75, 300, 20);
 
-        txtCari.setBounds(375, 85, 150, 25);
-        btnCari.setBounds(535, 85, 60, 25);
+        btnSimpan.setBounds(15, 110, 80, 30);
+        btnTambahBaru.setBounds(100, 110, 110, 30);
+        btnHapus.setBounds(215, 110, 80, 30);
 
-        jScrollPane1.setBounds(15, 125, 580, 260);
+        txtCari.setBounds(350, 115, 150, 25);
+        btnCari.setBounds(510, 115, 60, 25);
+
+        jScrollPane1.setBounds(15, 155, 555, 260);
 
         getContentPane().add(labelId);
         getContentPane().add(txtIdKategori);
         getContentPane().add(labelNama);
         getContentPane().add(txtNama);
+        getContentPane().add(labelKeterangan);
+        getContentPane().add(txtKeterangan);
         getContentPane().add(btnSimpan);
         getContentPane().add(btnTambahBaru);
         getContentPane().add(btnHapus);
@@ -103,7 +112,7 @@ public class FrmKategori extends javax.swing.JFrame {
         });
 
         setTitle("Form Kategori");
-        setSize(620, 440);
+        setSize(600, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         tampilkanData();
@@ -145,38 +154,42 @@ public class FrmKategori extends javax.swing.JFrame {
 
         txtIdKategori.setText(model.getValueAt(row, 0).toString());
         txtNama.setText(model.getValueAt(row, 1).toString());
+        txtKeterangan.setText(model.getValueAt(row, 2).toString());
     }
 
     public void kosongkanForm() {
         txtIdKategori.setText("0");
         txtNama.setText("");
+        txtKeterangan.setText("");
     }
 
     public void tampilkanData() {
-        String[] kolom = {"ID", "Kategori"};
+        String[] kolom = {"ID", "Nama", "Keterangan"};
         ArrayList<Kategori> list = new Kategori().getAll();
-        Object rowData[] = new Object[2];
+        Object rowData[] = new Object[3];
 
         tblKategori.setModel(new DefaultTableModel(new Object[][] {}, kolom));
 
         for (Kategori kat : list) {
             rowData[0] = kat.getIdkategori();
             rowData[1] = kat.getNama();
+            rowData[2] = kat.getKeterangan();
 
             ((DefaultTableModel) tblKategori.getModel()).addRow(rowData);
         }
     }
 
     public void cari(String keyword) {
-        String[] kolom = {"ID", "Kategori"};
+        String[] kolom = {"ID", "Nama", "Keterangan"};
         ArrayList<Kategori> list = new Kategori().search(keyword);
-        Object rowData[] = new Object[2];
+        Object rowData[] = new Object[3];
 
         tblKategori.setModel(new DefaultTableModel(new Object[][] {}, kolom));
 
         for (Kategori kat : list) {
             rowData[0] = kat.getIdkategori();
             rowData[1] = kat.getNama();
+            rowData[2] = kat.getKeterangan();
 
             ((DefaultTableModel) tblKategori.getModel()).addRow(rowData);
         }
