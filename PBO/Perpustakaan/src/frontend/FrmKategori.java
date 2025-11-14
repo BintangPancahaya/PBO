@@ -123,7 +123,7 @@ public class FrmKategori extends javax.swing.JFrame {
         Kategori kat = new Kategori();
         kat.setIdkategori(Integer.parseInt(txtIdKategori.getText()));
         kat.setNama(txtNama.getText());
-        kat.setKeterangan("");
+        kat.setKeterangan(txtKeterangan.getText());
         kat.save();
 
         txtIdKategori.setText(Integer.toString(kat.getIdkategori()));
